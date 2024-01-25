@@ -32,4 +32,4 @@ This repository contains Java practice programs focusing on key Java concepts to
 Clone the repository to your local machine using the following command:
 
 ```bash
-git clone https://github.com/your-username/java-basics-practice.git
+git clone https://github.com/kevinmanavalan/javaBasics.git
