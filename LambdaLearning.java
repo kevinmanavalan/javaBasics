@@ -6,39 +6,40 @@ import java.util.function.Function;
 public class LambdaLearning<E> {
 
     private List<E> fruits = new ArrayList<>();
-    public int prod(int num){
+
+    public int prod(int num) {
         return num * 2;
     }
 
 
-     public int div(int num){
+    public int div(int num) {
         return num / 2;
-     }
-     public int sum(int num){
+    }
+
+    public int sum(int num) {
         return num + 2;
-     }
+    }
 
-     public Basket getMypreferedFruit(Function<List<E>, E> prefLogic, int kg){
+    public Basket getMypreferedFruit(Function<List<E>, E> prefLogic, int kg) {
 
-         E prefFruit = prefLogic.apply(fruits);
-         //
+        E prefFruit = prefLogic.apply(fruits);
+        //
 
-        return new Basket(kg + " kilos of  " +prefFruit);
-     }
+        return new Basket(kg + " kilos of  " + prefFruit);
+    }
 
-     public static void main(String args[]){
-         LambdaLearning<String> tt = new LambdaLearning<>();
-         Function<Integer, Integer> prod = tt::prod;
-         Function<Integer, Integer> div = tt::div;
-         Function<Integer, Integer> sum = tt::sum;
-        System.out.println( sum.apply(div.apply(prod.apply(3))));
+    public static void main(String args[]) {
+        LambdaLearning<String> tt = new LambdaLearning<>();
+        Function<Integer, Integer> prod = tt::prod;
+        Function<Integer, Integer> div = tt::div;
+        Function<Integer, Integer> sum = tt::sum;
+        System.out.println(sum.apply(div.apply(prod.apply(3))));
 
 
-        Basket ret = tt.getMypreferedFruit(list -> {
+        Basket fruitBasket = tt.getMypreferedFruit(list -> {
             String myFirst = null;
             String mySecond = null;
-            for(String fruit : list)
-            {
+            for (String fruit : list) {
                 if (fruit.equals("Apple"))
                     myFirst = fruit;
                 if (fruit.equals("Orange"))
@@ -46,14 +47,17 @@ public class LambdaLearning<E> {
             }
             return myFirst != null ? myFirst : mySecond;
         }, 2);
-        System.out.println(ret.myFruit);
-     }
+        System.out.println(fruitBasket.myFruit);
+    }
 
 
-     static class Basket{
+    static class Basket {
         String myFruit = null;
-        public Basket(String fruit){this.myFruit = fruit; }
-     }
+
+        public Basket(String fruit) {
+            this.myFruit = fruit;
+        }
+    }
 
 
 }
