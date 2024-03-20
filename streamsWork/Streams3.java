@@ -17,10 +17,12 @@ public class Streams3 {
                 Arrays.asList("Jeff", "Bezos"),
                 Arrays.asList("Bill", "Gates"),
                 Arrays.asList("Mark", "Zuckerberg"));
+        System.out.println(namesNested);
 
         List<String> namesFlatStream = namesNested.stream()
                 .flatMap(Collection::stream).collect(Collectors.toList());
         assertEquals(namesFlatStream.size(), namesNested.size() * 2);
+        System.out.println(namesFlatStream);
     }
 
 }
