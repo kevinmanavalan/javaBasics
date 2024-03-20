@@ -1,4 +1,4 @@
-package LeetCode;
+package ApplicationDesign;
 
 
 import java.time.LocalTime;
