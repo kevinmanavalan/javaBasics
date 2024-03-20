@@ -1,5 +1,7 @@
 package LeetCode;
 
+// Total 3 approaches 👇👇👇👇
+
 public class MaxSubArray {
     public int maxSubArray(int[] nums) {   //Dynamic approach
         int maxSumAtEachPoint[] = new int[nums.length];
@@ -23,6 +25,16 @@ public class MaxSubArray {
             if (sum < 0) {
                 sum = 0;
             }
+        }
+        return maxSum;
+    }
+
+    public int approach3(int[] nums) {
+        int n = nums.length;
+        int maxSum = nums[0];
+        for (int i = 1; i < n; i++) {
+            nums[i] = Math.max(nums[i], nums[i - 1] + nums[i]);
+            maxSum = Math.max(maxSum, nums[i]);
         }
         return maxSum;
     }
