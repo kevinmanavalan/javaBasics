@@ -11,7 +11,7 @@ public class GenericsExample {
         }
 
         public T action() {
-            return (T) key;
+            return key;
         }
 
         public static void main(String args[]) {
