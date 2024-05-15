@@ -32,7 +32,7 @@ public class MergeIntervals {
             }
         }
         if (intervals[n - 1][0] > right) {
-            results.add(Arrays.stream(intervals[n - 1]).mapToObj(Integer::valueOf).collect(Collectors.toList()));
+            results.add(Arrays.stream(intervals[n - 1]).boxed().collect(Collectors.toList()));
 
 
 //            👇ANOTHER APPROACH TO CONVERT ARRAY TO LIST.👇
