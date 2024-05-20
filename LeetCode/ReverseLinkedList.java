@@ -1,7 +1,7 @@
 package LeetCode;
 
 public class ReverseLinkedList {
-    //URL:/problems/reverse-linked-list/
+    //URL:https://leetcode.com/problems/reverse-linked-list/
     public ListNode reverseList(ListNode head) {
         ListNode previousHead = null;
         while (head != null) {
