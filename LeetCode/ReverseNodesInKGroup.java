@@ -21,8 +21,8 @@ public class ReverseNodesInKGroup {
         }
     }
 
-    public ListNode reverseKGroup(ListNode head, int k) {
-        ListNode temp = head;
+    public ListNode reverseKGroup(ListNode head, int k) {              // T = O(2N)
+        ListNode temp = head;                                          // S = O(1)
         ListNode prevNode = null;
         while (temp != null) {
             ListNode kthNode = getKthNode(temp, k);
