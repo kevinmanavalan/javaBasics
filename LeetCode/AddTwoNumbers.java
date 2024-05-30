@@ -3,6 +3,7 @@ package LeetCode;
 class ListNode {
     int val;
     ListNode next;
+    ListNode child;
 
     ListNode() {
     }
@@ -14,6 +15,11 @@ class ListNode {
     ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
+    }
+    ListNode(int val, ListNode next, ListNode child){
+        this.val = val;
+        this.next = next;
+        this.child = child;
     }
 }
 public class AddTwoNumbers {
