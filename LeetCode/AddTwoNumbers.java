@@ -4,6 +4,7 @@ class ListNode {
     int val;
     ListNode next;
     ListNode child;
+    ListNode random;
 
     ListNode() {
     }
@@ -20,6 +21,12 @@ class ListNode {
         this.val = val;
         this.next = next;
         this.child = child;
+    }
+    ListNode(int val, ListNode next, ListNode child, ListNode random){
+        this.val = val;
+        this.next = next;
+        this.child = child;
+        this.random = random;
     }
 }
 public class AddTwoNumbers {
