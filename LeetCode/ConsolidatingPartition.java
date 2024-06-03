@@ -4,9 +4,9 @@ import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
 
-public class ConsolidatingPartition {
-    public static void main(String[] args) {
-        List<Integer> used = new ArrayList<>();
+public class ConsolidatingPartition {                          // given the used up space
+    public static void main(String[] args) {                  // given the actual available space on each partition
+        List<Integer> used = new ArrayList<>();               // find the minimum no. of partitions required to store the data ?
         used.add(3);
         used.add(2);
         used.add(1);
