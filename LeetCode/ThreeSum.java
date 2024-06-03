@@ -1,7 +1,7 @@
 package LeetCode;
 
 
-//URL:https://takeuforward.org/data-structure/3-sum-find-triplets-that-add-up-to-a-zero/
+//URL:https://leetcode.com/problems/3sum
 import java.util.*;
 import java.util.List;
 public class ThreeSum {
