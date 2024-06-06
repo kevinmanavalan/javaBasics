@@ -12,7 +12,7 @@ public class WildCardFun {
     }
 
     public static void main(String[] args) {
-        new WildCardFun.Sample2().sample(new LinkedList());
+//        new WildCardFun.Sample2().sample(new LinkedList());
         Sample1<?> obj = new Sample1<>();
 
         if (obj instanceof Sample1<?>){
