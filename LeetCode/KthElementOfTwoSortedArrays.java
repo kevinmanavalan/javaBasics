@@ -72,5 +72,6 @@ public class KthElementOfTwoSortedArrays {
             a2++;
             count++;
         }
+        return -1;
     }
 }
